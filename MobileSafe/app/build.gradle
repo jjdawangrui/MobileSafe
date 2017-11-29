@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+    defaultConfig {
+        applicationId "com.itheima.mobilesafe"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.+'
+    //添加butterknife的依赖
+    compile 'com.jakewharton:butterknife:5.1.1'
+    //添加okhttp依赖库
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okio:okio:1.11.0'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    //常驻悬浮框的ListView的jar包
+    compile 'com.google.code.gson:gson:2.8.0'
+    //手机杀毒界面的自定义进度条控制
+    //可以先输入
+    //compile 'com.github.lzyzsd:circleprogress:1.2.1'
+    //然后点击同步，进行下载jar包，但是好像下载不了，只能去github网站下载，只要下载library，它的作用等同于jar包
+    //然后new--import module，找到library
+    //导入library成功后，需要进行关联，File--Project Structure--选择依赖，点加号，选第3个module依赖，就好了
+    //导入的ArcProgress的依赖，在library里面
+    compile project(':library')
+}

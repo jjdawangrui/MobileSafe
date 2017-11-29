@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="号码归属地查询"/>
+
+    <EditText
+        android:id="@+id/edittext_number"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入电话号码"
+        android:phoneNumber="true"
+        android:background="@drawable/shape_editnumber"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/button_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/selector_buttonquery"
+        android:text="查询"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:textSize="18sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="15dp"
+        android:text="归属地：未知"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

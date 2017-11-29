@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此处，采用的插值器为：循环插值器，循环次数为7.
+该插值器：可以使一个动画反复执行，从而达到一个动画左右、垂直或者其他如斜方向上的反复弹动（摆动）
+-->
+<cycleInterpolator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cycles="7"/>

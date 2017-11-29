@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobilesafe="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <TextView
+        style="@style/TitleStyle"
+        android:text="常用工具"/>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_query"
+        mobilesafe:isToggle="false"
+        mobilesafe:title="号码归属地查询"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/selector_setting_1">
+    </view.ItemSettingView>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_save"
+        mobilesafe:isToggle="false"
+        mobilesafe:title="短信备份"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_setting_2">
+    </view.ItemSettingView>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_backup"
+        mobilesafe:isToggle="false"
+        mobilesafe:title="短信还原"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_setting_3">
+    </view.ItemSettingView>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_lock"
+        mobilesafe:isToggle="false"
+        mobilesafe:title="程序锁管理"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/selector_setting_1">
+    </view.ItemSettingView>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_dogservice"
+        mobilesafe:isToggle="true"
+        mobilesafe:title="电子狗服务"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_setting_3">
+    </view.ItemSettingView>
+
+</LinearLayout>

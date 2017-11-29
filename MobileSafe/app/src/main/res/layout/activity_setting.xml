@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobilesafe="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="设置中心"
+        style="@style/TitleStyle"/>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_1_autoupdate"
+        mobilesafe:title="设置自动更新"
+        mobilesafe:isToggle="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/selector_setting_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </view.ItemSettingView>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_2_showlocation"
+        mobilesafe:title="归属地显示设置"
+        mobilesafe:isToggle="true"
+        android:background="@drawable/selector_setting_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </view.ItemSettingView>
+
+    <view.ItemSettingView
+        android:id="@+id/itemsettingview_3_locationstyle"
+        mobilesafe:title="归属地风格设置"
+        mobilesafe:isToggle="false"
+        android:background="@drawable/selector_setting_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </view.ItemSettingView>
+
+</LinearLayout>

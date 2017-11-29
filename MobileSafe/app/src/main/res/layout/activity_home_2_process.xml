@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobilesafe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleStyle"
+            android:text="进程管理" />
+        <ImageView
+            android:id="@+id/imageview_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/selector_clear_bg" />
+    </RelativeLayout>
+
+    <view.ProcessItemView
+        android:id="@+id/piv_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </view.ProcessItemView>
+
+    <view.ProcessItemView
+        android:id="@+id/piv_memory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+    </view.ProcessItemView>
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ListView
+            android:id="@+id/lv_process_test"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+
+        <!--用include就可以把东西加进来了-->
+        <include
+            android:id="@+id/progress"
+            layout="@layout/layout_progress"/>
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!--抽屉布局设置-->
+        <SlidingDrawer
+            android:id="@+id/slidingDrawer"
+            android:handle="@+id/handle"
+            android:content="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@id/handle"
+                android:gravity="center"
+                android:background="@mipmap/drawer_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/arrow_1"
+                    android:src="@mipmap/drawer_arrow_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/arrow_2"
+                    android:layout_below="@id/arrow_1"
+                    android:src="@mipmap/drawer_arrow_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/content"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#333"
+                    android:text="进程管理设置"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <view.ItemSettingView
+                    mobilesafe:title="显示系统进程"
+                    mobilesafe:isToggle="true"
+                    android:id="@+id/siv_show_sys_process"
+                    android:background="@drawable/selector_setting_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </view.ItemSettingView>
+
+                <view.ItemSettingView
+                    mobilesafe:isToggle="true"
+                    mobilesafe:title="锁屏自动清理"
+                    android:id="@+id/siv_lock_clean"
+                    android:background="@drawable/selector_setting_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </view.ItemSettingView>
+            </LinearLayout>
+
+        </SlidingDrawer>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_select_all"
+            android:background="@drawable/selector_process_button_bg"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="全选"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_select_reverse"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/selector_process_button_bg"
+            android:text="反选"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

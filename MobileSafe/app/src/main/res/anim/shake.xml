@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Translate：代表的是平移动画
+android:fromXDelta：在x轴方向开始移动的百分比
+android:toXDelta：在x轴方向结束移动的百分比
+android:duration：动画执行的时间
+android:interpolator：插值器，主要来改变动画变化率
+-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="0"
+    android:toXDelta="10"
+    android:duration="1000"
+    android:interpolator="@anim/cycle_7"/>

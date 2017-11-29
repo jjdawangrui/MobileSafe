@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/imageview_sytle"
+        android:src="@drawable/shape_style_blue"
+        android:layout_width="80dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/textview_color_des"
+        android:layout_toRightOf="@id/imageview_sytle"
+        android:text="卫士蓝"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/imageview_check"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15sp"
+        android:src="@mipmap/ic_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

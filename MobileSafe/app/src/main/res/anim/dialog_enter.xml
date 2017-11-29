@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+    <!--动画的运动规则是否一致-->
+    <!--interpolator篡改器-->
+    <translate
+        android:duration="200"
+        android:fromYDelta="100%"
+        android:interpolator="@anim/decelerate_quint"
+        android:toYDelta="0" />
+    <alpha
+        android:duration="200"
+        android:fromAlpha="0.5"
+        android:interpolator="@anim/decelerate_cubic"
+        android:toAlpha="1.0" />
+</set>

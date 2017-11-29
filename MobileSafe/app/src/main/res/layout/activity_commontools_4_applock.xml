@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--头顶上的两个按钮加锁未加锁-->
+    <LinearLayout
+        android:background="#429ED6"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_unlock"
+            android:background="@drawable/shape_unlock_bg_blue"
+            android:text="未加锁"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/btn_lock"
+            android:background="@drawable/shape_lock_bg_white"
+            android:textSize="16sp"
+            android:textColor="#0000ff"
+            android:text="已加锁"
+            android:layout_width="80dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title_des"
+        android:text="标题"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lv_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <!--先把加锁的listview隐藏-->
+        <ListView
+            android:id="@+id/lv_lock"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+        <include
+            android:id="@+id/progress"
+            layout="@layout/layout_progress" />
+    </FrameLayout>
+</LinearLayout>

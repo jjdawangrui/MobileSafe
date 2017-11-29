@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:background="#ccc"
+        android:text="选择归属地样式"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--android:divider="#666"指定分割线颜色-->
+    <!--android:dividerHeight="6dp"指定分割线高度-->
+    <ListView
+        android:id="@+id/listview_style"
+        android:listSelector="@drawable/selector_list_bg"
+        android:divider="#999"
+        android:dividerHeight="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+    </ListView>
+</LinearLayout>

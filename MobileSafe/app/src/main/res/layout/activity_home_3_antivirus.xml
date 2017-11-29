@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/TitleStyle"
+        android:text="手机杀毒"/>
+
+    <!--标题下面的框架-->
+    <FrameLayout
+        android:background="#429ED6"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_progress"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:layout_centerHorizontal="true"
+                android:id="@+id/arc_progress"
+                android:background="#429ED6"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                custom:arc_progress="5"
+                custom:arc_text_color="#fff"
+                custom:arc_stroke_width="8dp"
+                custom:arc_bottom_text="扫描"/>
+            <!--一直在动的包名-->
+            <TextView
+                android:id="@+id/tv_packagename"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="应用程序包名"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!--设置成隐藏的线性布局，没扫到毒的时候再让其显示吧-->
+        <LinearLayout
+            android:id="@+id/ll_safe"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <TextView
+                android:id="@+id/tv_safe"
+                android:text="你的手机很安全"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_safe"
+                android:background="@drawable/selector_btn_bg"
+                android:textColor="#fff"
+                android:text="重新扫描"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_anim"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
